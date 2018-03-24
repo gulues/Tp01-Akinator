@@ -15,42 +15,42 @@ public class paises {
 		ArrayList<paises> listaPaises= new ArrayList<paises>();
 		
 		
-		boolean[] arg= {true,false, false, true, true, false, true ,false};
+		boolean[] arg= {true,false, false, true, false, false, true ,false};
 		p = new paises("Argentina", arg);
 		listaPaises.add(p) ;
 		
-		boolean[] uru= {false,false, false, true, true, false, true ,false};
+		boolean[] uru= {false,false, false, true, false, false, true ,false};
 		p = new paises("Uruguay", uru);
 		listaPaises.add(p) ;
 		
-		boolean[] bra= {false,true, false, true, true, false, true ,false};
+		boolean[] bra= {false,true, false, true, false, false, true ,false};
 		p = new paises("Brasil", bra);
 		listaPaises.add(p) ;
 
-		boolean[] chi= {true,true, true, true, true, false, true ,false};
+		boolean[] chi= {true,true, true, false, false, false, true ,false};
 		p = new paises("Chile", chi);
 		listaPaises.add(p) ;
 		
 		
-		boolean[] per= {true,true, true, true, true, false, true ,false};
+		boolean[] per= {true,true, true, false, true, false, true ,false};
 		p = new paises("Peru", per);
 		listaPaises.add(p) ;
 		
 		
-		boolean[] bol= {true,false, false, true, true, false, true ,false};
+		boolean[] bol= {true,false, false, false, false, false, true ,false};
 		p = new paises("Bolvia", bol);
 		listaPaises.add(p) ;
 		
 		
-		boolean[] par= {false,true, false, true, true, false, true ,false};
+		boolean[] par= {false,true, false, false, false, false, true ,false};
 		p = new paises("Paraguay", par);
 		listaPaises.add(p) ;
 		
-		boolean[] col= {true,false, true, true, true, false, true ,false};
+		boolean[] col= {true,false, true, false, false, false, true ,false};
 		p = new paises("Colombia", col);
 		listaPaises.add(p) ;
 		
-		boolean[] ecu= {false,true, true, true, true, false, true ,false};
+		boolean[] ecu= {false,true, true, false, false, false, true ,false};
 		p = new paises("Ecuador", ecu);
 		listaPaises.add(p) ;
 		
