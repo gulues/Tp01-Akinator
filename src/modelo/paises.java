@@ -68,7 +68,7 @@ public class paises {
 		for (i = 0; i < listaPaises.size(); i++) {
 			if (listaPaises.get(i).valores[val] != valor) {
 				listaPaises.remove(i);
-				if (i > 0)
+//				if (i > 0)
 					i--;
 			}
 		}
