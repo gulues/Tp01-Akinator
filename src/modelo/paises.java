@@ -1,7 +1,6 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class paises {
 	String pais;
@@ -15,7 +14,14 @@ public class paises {
 
 	public static ArrayList<paises> crearListaPaises() {
 		paises p;
+
 		listaPaises = new ArrayList<paises>();
+
+		// ¿El nombre de su pais termina con una vocal?
+		// ¿La bandera de su pais, contiene escudos o estrellas?
+		// ¿Su pais tiene costa en el oceano pácifico?
+		// ¿Su pais fue campeón mundial de fútbol?
+		// ¿La moneda oficial de su pais es el Sol?
 
 		boolean[] arg = { true, false, false, true, false, false, true, false };
 		p = new paises("Argentina", arg);
@@ -37,7 +43,7 @@ public class paises {
 		p = new paises("Peru", per);
 		listaPaises.add(p);
 
-		boolean[] bol = { true, false, false, false, false, false, true, false };
+		boolean[] bol = { true, true, false, false, false, false, true, false };
 		p = new paises("Bolvia", bol);
 		listaPaises.add(p);
 
@@ -56,18 +62,21 @@ public class paises {
 
 	}
 
-	public static void filtrarPaises(boolean valor, int val) {
-		for (paises paises : listaPaises) {
-			if (paises.valores[val]!=valor)
-				listaPaises.remove(val);
 
+	public static void filtrarPaises(boolean valor, int val) {
+		int i;
+		for (i = 0; i < listaPaises.size(); i++) {
+			if (listaPaises.get(i).valores[val] != valor) {
+				listaPaises.remove(i);
+				if (i > 0)
+					i--;
+			}
 		}
 
 	}
-
 	@Override
 	public String toString() {
-		return "paises [pais=" + pais + ", valores=" + Arrays.toString(valores) + "]";
+		return pais;
 	}
 
 }

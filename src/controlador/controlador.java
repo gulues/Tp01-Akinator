@@ -1,42 +1,43 @@
 package controlador;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+
 
 import interfaz.frmMain;
 import modelo.paises;
 import modelo.preguntas;
 
-public class controlador implements ActionListener {
+public class controlador {
+	JFrame parent;
 	static int cont=0;
 	static preguntas preg = new preguntas();
+	static paises pais;
 	static ArrayList<paises> p = paises.crearListaPaises();
 	
 	public static  void mostrarPreguntas() {
 		if (cont<preg.listaPreguntas.size())
 			frmMain.lblpreguntas.setText(preg.listaPreguntas.get(cont));
-		
-		
-		
-	
-
-	frmMain.btnSi.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {
-			cont++;
-			mostrarPreguntas();
-			paises.filtrarPaises(true, cont-1);
-			
-			
-		}
-
-	});
+		else
+			frmMain.lblpreguntas.setText("Su pais es: "+ p.get(0));
 	
 }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+
+	public static void actionPerformed(boolean SiNo) {
+		cont++;
+		mostrarPreguntas();
+		paises.filtrarPaises(SiNo, cont-1);
+		System.out.println(p.toString());// TODO Auto-generated method stub
+		if(p.size()==1) {
+			pais=p.get(0);
+			frmMain.lblpreguntas.setText("Su pais es: "+ pais);
+			frmMain.btnNo.setEnabled(false);	
+			frmMain.btnSi.setEnabled(false);
+		}
+			
 	}
 }
