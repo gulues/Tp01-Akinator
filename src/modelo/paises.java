@@ -10,7 +10,8 @@ public class paises {
 		this.pais = pais;
 		this.valores = valores;
 	}
-	public void crearListaPaises(){
+	
+	public static ArrayList<paises> crearListaPaises(){
 		paises p ;
 		ArrayList<paises> listaPaises= new ArrayList<paises>();
 		
@@ -53,10 +54,12 @@ public class paises {
 		boolean[] ecu= {false,true, true, false, false, false, true ,false};
 		p = new paises("Ecuador", ecu);
 		listaPaises.add(p) ;
+		return listaPaises;
 		
 		
 		
 		
 	}
+	
 
 }

@@ -2,16 +2,20 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import interfaz.frmMain;
+import modelo.paises;
 import modelo.preguntas;
 
 public class controlador implements ActionListener {
 	static int cont=0;
-	static preguntas p = new preguntas();
+	static preguntas preg = new preguntas();
+	static ArrayList<paises> p = paises.crearListaPaises();
+	
 	public static  void mostrarPreguntas() {
-		if (cont<p.listaPreguntas.size())
-			frmMain.lblpreguntas.setText(p.listaPreguntas.get(cont));
+		if (cont<preg.listaPreguntas.size())
+			frmMain.lblpreguntas.setText(preg.listaPreguntas.get(cont));
 		
 		
 		
