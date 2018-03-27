@@ -25,7 +25,11 @@ public class controlador implements ActionListener {
 		public void actionPerformed(ActionEvent arg0) {
 			cont++;
 			mostrarPreguntas();
+			paises.filtrarPaises(true, cont-1);
+			
+			
 		}
+
 	});
 	
 }
